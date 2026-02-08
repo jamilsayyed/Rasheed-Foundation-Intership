@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rasheed Foundation | Empowering Communities</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Rasheed<span>Foundation</span>.</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Our Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger" id="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Empowering Future Generations</h1>
+            <p>Dedicated to education, healthcare, and community development across the region.</p>
+            <a href="#contact" class="btn btn-primary">Join Our Mission</a>
+            
+            <div id="quote-container" class="api-box">
+                <div id="loading" class="spinner"></div>
+                <p id="quote-text"></p>
+                <small id="quote-author"></small>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-grid">
+                <div class="about-img">
+                    <img src="https://placehold.co/600x400/2c3e50/FFF?text=Our+Mission" alt="Mission">
+                </div>
+                <div class="about-text">
+                    <h3>Who We Are</h3>
+                    <p>The Rasheed Foundation is a non-profit organization committed to uplifting underprivileged communities. Established with a vision of equality, we focus on sustainable development goals.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check-circle"></i> 10+ Years of Service</li>
+                        <li><i class="fas fa-check-circle"></i> 5000+ Students Educated</li>
+                        <li><i class="fas fa-check-circle"></i> 100% Transparent Donations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Our Initiatives</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <i class="fas fa-graduation-cap card-icon"></i>
+                    <h3>Education Support</h3>
+                    <p>Providing scholarships and learning materials to students in municipal schools.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-heartbeat card-icon"></i>
+                    <h3>Healthcare Camps</h3>
+                    <p>Organizing free medical checkups and blood donation drives in rural areas.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-hands-helping card-icon"></i>
+                    <h3>Community Relief</h3>
+                    <p>Emergency food distribution and disaster management support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-wrapper">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" id="name" placeholder="Your Name">
+                        <small class="error-msg">Name is required</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="email" placeholder="Your Email">
+                        <small class="error-msg">Enter a valid email</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea id="message" rows="5" placeholder="How can we help?"></textarea>
+                        <small class="error-msg">Message cannot be empty</small>
+                    </div>
+                    <button type="submit" class="btn btn-dark">Send Message</button>
+                    <p id="success-msg" class="success-msg">Message sent successfully!</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Rasheed Foundation. All rights reserved.</p>
+        <p style="font-size: 0.8rem; color: #aaa;">Developed by Sayyed | TY B.Sc.IT Student</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
