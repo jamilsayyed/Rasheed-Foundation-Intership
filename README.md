@@ -12,6 +12,3 @@ A responsive, mobile-first business website built for the Rasheed Foundation int
 - HTML5
 - CSS3 (Flexbox & Grid)
 - JavaScript (ES6)
-
-## 🔗 Live Demo
-[Site](rasheed-foundation-jamil.netlify.app)
