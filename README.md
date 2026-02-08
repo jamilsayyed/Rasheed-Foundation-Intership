@@ -14,4 +14,4 @@ A responsive, mobile-first business website built for the Rasheed Foundation int
 - JavaScript (ES6)
 
 ## 🔗 Live Demo
-[View Live Site](rasheed-foundation-jamil.netlify.app)
+rasheed-foundation-jamil.netlify.app
