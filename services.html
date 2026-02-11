@@ -3,85 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Rasheed Foundation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Initiatives | Rasheed Foundation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="scroll-progress" id="myBar"></div>
+
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">Rasheed<span>Foundation</span>.</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html" class="active">Services</a></li>
-                <li><a href="contact.html" class="btn-nav">Contact</a></li>
-            </ul>
-        </div>
+        <a href="index.html" class="logo"><i class="fas fa-layer-group"></i> Rasheed<span>.</span></a>
+        <div class="burger"><i class="fas fa-bars"></i></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Impact</a></li>
+            <li><a href="services.html">Initiatives</a></li>
+            <li><a href="contact.html" class="btn-nav">Join Us</a></li>
+        </ul>
     </nav>
 
+    <div class="page-header">
+        <h1>Core Initiatives</h1>
+        <p style="color: var(--text-muted);">Our active projects across Mumbai.</p>
+    </div>
+
     <section class="section">
-        <div class="container">
-            <h1 class="section-title">Our Initiatives</h1>
-            <div class="news-grid"> <div class="news-card">
-                    <div style="height: 200px; background: #eff6ff; display: flex; align-items: center; justify-content: center; color: var(--accent);">
-                        <i class="fas fa-laptop-code fa-4x"></i>
-                    </div>
-                    <div class="news-content">
-                        <h3 class="news-title">Digital Literacy</h3>
-                        <p class="news-body">Equipping 50+ municipal schools with modern computer labs and high-speed internet to bridge the digital divide.</p>
-                    </div>
-                </div>
-
-                <div class="news-card">
-                    <div style="height: 200px; background: #fef2f2; display: flex; align-items: center; justify-content: center; color: #ef4444;">
-                        <i class="fas fa-heartbeat fa-4x"></i>
-                    </div>
-                    <div class="news-content">
-                        <h3 class="news-title">Mobile Healthcare</h3>
-                        <p class="news-body">A fleet of 5 medical vans providing weekly checkups and free insulin distribution in remote villages.</p>
-                    </div>
-                </div>
-
-                <div class="news-card">
-                    <div style="height: 200px; background: #f0fdf4; display: flex; align-items: center; justify-content: center; color: #22c55e;">
-                        <i class="fas fa-seedling fa-4x"></i>
-                    </div>
-                    <div class="news-content">
-                        <h3 class="news-title">Urban Greening</h3>
-                        <p class="news-body">Community-led tree plantation drives targeting 10,000 saplings per year in urban heat islands.</p>
-                    </div>
-                </div>
-
+        <div class="grid-3">
+            <div class="tech-card">
+                <div class="icon-box"><i class="fas fa-code"></i></div>
+                <h3>Code for Future</h3>
+                <p>A weekend bootcamp teaching Python and Web Development.</p>
+            </div>
+            <div class="tech-card">
+                <div class="icon-box"><i class="fas fa-leaf"></i></div>
+                <h3>Urban Greening</h3>
+                <p>IoT-enabled vertical gardens in slum areas.</p>
+            </div>
+            <div class="tech-card">
+                <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
+                <h3>Legal Aid Tech</h3>
+                <p>App-based platform connecting communities with pro-bono lawyers.</p>
+            </div>
+            <div class="tech-card">
+                <div class="icon-box"><i class="fas fa-solar-panel"></i></div>
+                <h3>Solar Schools</h3>
+                <p>Installing solar panels in off-grid municipal schools.</p>
+            </div>
+            <div class="tech-card">
+                <div class="icon-box"><i class="fas fa-book-reader"></i></div>
+                <h3>E-Library</h3>
+                <p>Free access to thousands of educational ebooks.</p>
+            </div>
+            <div class="tech-card">
+                <div class="icon-box"><i class="fas fa-laptop-medical"></i></div>
+                <h3>Tele-Psychiatry</h3>
+                <p>Mental health support via secure video calls.</p>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <a href="#" class="logo" style="color:white; margin-bottom: 20px; display:block;">Rasheed<span>.</span></a>
-                <p style="color: #94a3b8; font-size: 0.9rem;">Empowering communities.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="about.html">Our Mission</a></li>
-                    <li><a href="services.html">Impact Reports</a></li>
-                    <li><a href="contact.html">Volunteer</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Newsletter</h4>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Enter your email">
-                    <button class="btn" style="width:100%; padding:10px;">Subscribe</button>
-                </form>
-            </div>
+        <div class="footer-col" style="flex: 2;">
+            <a href="#" class="logo" style="margin-bottom: 20px;">Rasheed<span>.</span></a>
         </div>
-        <div class="copyright">&copy; 2026 Rasheed Foundation. All rights reserved.</div>
     </footer>
     <script src="script.js"></script>
 </body>

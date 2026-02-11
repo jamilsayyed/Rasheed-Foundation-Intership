@@ -3,70 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Rasheed Foundation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>About | Rasheed Foundation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="scroll-progress" id="myBar"></div>
+
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">Rasheed<span>Foundation</span>.</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html" class="btn-nav">Contact</a></li>
-            </ul>
-        </div>
+        <a href="index.html" class="logo"><i class="fas fa-layer-group"></i> Rasheed<span>.</span></a>
+        <div class="burger"><i class="fas fa-bars"></i></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Impact</a></li>
+            <li><a href="services.html">Initiatives</a></li>
+            <li><a href="contact.html" class="btn-nav">Join Us</a></li>
+        </ul>
     </nav>
 
+    <div class="page-header">
+        <h1>Our Mission</h1>
+        <p style="color: var(--text-muted);">Bridging the digital divide since 2015.</p>
+    </div>
+
     <section class="section">
-        <div class="container">
-            <h1 class="section-title">Who We Are</h1>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
-                <div>
-                    <h2 style="font-size: 2rem; margin-bottom: 20px;">A Decade of Impact</h2>
-                    <p style="line-height: 1.8; color: #475569; margin-bottom: 20px;">
-                        Founded in 2015, the Rasheed Foundation began with a simple mission: to provide textbooks to municipal schools in Mumbai. Today, we have evolved into a multi-faceted organization tackling Education, Healthcare, and Disaster Relief.
-                    </p>
-                    <ul style="list-style: none;">
-                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--accent);"></i> 100% Transparent Funding</li>
-                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--accent);"></i> Community-Led Initiatives</li>
-                        <li style="margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--accent);"></i> Data-Driven Results</li>
-                    </ul>
+        <div class="grid-2">
+            <div>
+                <h2 style="font-size: 2.5rem; color: white; margin-bottom: 20px;">A Decade of Data-Driven Change</h2>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">
+                    The Rasheed Foundation isn't just a charity; we are a tech-forward organization. We believe that money alone cannot solve poverty—smart systems, education, and access to information can.
+                </p>
+                <div class="tech-card" style="padding: 20px; display: inline-block; border-color: var(--primary);">
+                    <i class="fas fa-quote-left" style="color: var(--primary);"></i>
+                    <span style="color: white; font-weight: 500;"> "Technology is the great equalizer."</span>
                 </div>
-                <div style="height: 400px; background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center;">
-                    <i class="fas fa-users fa-5x" style="color: #94a3b8;"></i>
-                </div>
+            </div>
+            <div class="tech-card" style="text-align: center; border-color: var(--primary);">
+                <i class="fas fa-users fa-5x" style="color: var(--text-muted); opacity: 0.2;"></i>
+                <h3 style="margin-top: 20px;">500+ Volunteers</h3>
+                <p>Engineers, Doctors, and Teachers.</p>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <a href="#" class="logo" style="color:white; margin-bottom: 20px; display:block;">Rasheed<span>.</span></a>
-                <p style="color: #94a3b8; font-size: 0.9rem;">Empowering communities through education, healthcare, and sustainable development.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="about.html">Our Mission</a></li>
-                    <li><a href="services.html">Impact Reports</a></li>
-                    <li><a href="contact.html">Volunteer</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Newsletter</h4>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Enter your email">
-                    <button class="btn" style="width:100%; padding:10px;">Subscribe</button>
-                </form>
-            </div>
+        <div class="footer-col" style="flex: 2;">
+            <a href="#" class="logo" style="margin-bottom: 20px;">Rasheed<span>.</span></a>
+            <p style="color: var(--text-muted);">Empowering the next generation.</p>
         </div>
-        <div class="copyright">&copy; 2026 Rasheed Foundation. All rights reserved.</div>
     </footer>
     <script src="script.js"></script>
 </body>

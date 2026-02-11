@@ -3,283 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Rasheed Foundation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Contact | Rasheed Foundation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        /* --- CSS IS HERE SO IT CANNOT FAIL --- */
-        :root {
-            --primary: #0f172a;    /* Dark Navy */
-            --accent: #2563eb;     /* Royal Blue */
-            --white: #ffffff;
-            --light: #f8fafc;
-            --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        
-        body {
-            background-color: var(--light);
-            color: var(--primary);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Navbar */
-        .navbar {
-            background: white;
-            padding: 1.2rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            position: sticky; top: 0; z-index: 100;
-        }
-        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; }
-        .logo span { color: var(--accent); }
-        .nav-links { display: flex; gap: 2rem; list-style: none; }
-        .nav-links a { text-decoration: none; color: #64748b; font-weight: 500; transition: 0.3s; }
-        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
-        .btn-nav { padding: 8px 20px; background: var(--primary); color: white !important; border-radius: 50px; }
-
-        /* The Contact Section */
-        .contact-section {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 4rem 20px;
-        }
-
-        .contact-card {
-            background: white;
-            width: 100%;
-            max-width: 1000px;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            display: flex;
-            flex-wrap: wrap; /* Makes it responsive */
-        }
-
-        /* Left Side: Info */
-        .contact-info {
-            background: linear-gradient(135deg, var(--primary) 0%, #1e293b 100%);
-            color: white;
-            padding: 3rem;
-            flex: 1;
-            min-width: 300px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        /* Decorative Circle */
-        .contact-info::before {
-            content: ''; position: absolute; width: 200px; height: 200px;
-            background: rgba(255,255,255,0.1); border-radius: 50%;
-            bottom: -50px; right: -50px;
-        }
-
-        .contact-info h2 { font-size: 2.2rem; margin-bottom: 1rem; line-height: 1.2; }
-        .contact-info p { color: #cbd5e1; margin-bottom: 2.5rem; font-size: 0.95rem; }
-
-        .info-item { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px; }
-        .info-item i { font-size: 1.2rem; color: var(--accent); margin-top: 5px; }
-        .info-item h4 { font-size: 1.1rem; margin-bottom: 5px; }
-        .info-item span { color: #94a3b8; font-size: 0.9rem; }
-
-        /* Right Side: Form */
-        .contact-form {
-            flex: 1.5;
-            padding: 3rem;
-            background: white;
-            min-width: 300px;
-        }
-
-        .form-header h3 { font-size: 1.8rem; margin-bottom: 2rem; color: var(--primary); }
-
-        /* Floating Input Styles */
-        .input-group { position: relative; margin-bottom: 2rem; }
-        
-        .input-group input, 
-        .input-group textarea {
-            width: 100%;
-            padding: 10px 0;
-            font-size: 1rem;
-            color: var(--primary);
-            border: none;
-            border-bottom: 2px solid #e2e8f0;
-            outline: none;
-            background: transparent;
-            transition: 0.3s;
-        }
-
-        .input-group label {
-            position: absolute;
-            top: 10px;
-            left: 0;
-            color: #94a3b8;
-            pointer-events: none;
-            transition: 0.3s ease all;
-            font-size: 1rem;
-        }
-
-        /* Animation: Move Label Up on Focus or Valid Input */
-        .input-group input:focus ~ label,
-        .input-group input:valid ~ label,
-        .input-group textarea:focus ~ label,
-        .input-group textarea:valid ~ label {
-            top: -20px;
-            font-size: 0.8rem;
-            color: var(--accent);
-            font-weight: 600;
-        }
-
-        .input-group input:focus, 
-        .input-group textarea:focus {
-            border-bottom-color: var(--accent);
-        }
-
-        /* Button */
-        .btn-submit {
-            width: 100%;
-            padding: 15px;
-            background: var(--accent);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .btn-submit:hover { background: #1d4ed8; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2); }
-
-        /* Mobile Adjustments */
-        @media (max-width: 768px) {
-            .contact-card { flex-direction: column; }
-            .contact-info, .contact-form { padding: 2rem; }
-            .nav-links { display: none; } /* Add burger logic if needed */
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="navbar">
-        <a href="index.html" class="logo">Rasheed<span>Foundation</span>.</a>
+        <a href="index.html" class="logo"><i class="fas fa-layer-group"></i> Rasheed<span>.</span></a>
+        <div class="burger"><i class="fas fa-bars"></i></div>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html" class="active btn-nav">Contact</a></li>
+            <li><a href="about.html">Impact</a></li>
+            <li><a href="services.html">Initiatives</a></li>
+            <li><a href="contact.html">Join Us</a></li>
         </ul>
     </nav>
 
-    <section class="contact-section">
-        <div class="contact-card">
-            
-            <div class="contact-info">
-                <h2>Let's Make an Impact Together</h2>
-                <p>Whether you want to volunteer, donate, or just say hello, we'd love to hear from you.</p>
+    <div class="page-header">
+        <h1>Join the Movement</h1>
+        <p style="color: var(--text-muted);">Volunteer, Donate, or Partner with us.</p>
+    </div>
 
-                <div class="info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h4>Visit Us</h4>
-                        <span>SIES College, Nerul, Mumbai</span>
-                    </div>
+    <section class="section">
+        <div class="form-box">
+            <form id="contactForm">
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" required placeholder="John Doe">
                 </div>
-
-                <div class="info-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h4>Email Us</h4>
-                        <span>contact@rasheedfoundation.org</span>
-                    </div>
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" required placeholder="john@example.com">
                 </div>
-
-                <div class="info-item">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <h4>Call Us</h4>
-                        <span>+91 98765 43210</span>
-                    </div>
+                <div class="input-group">
+                    <label>How can you help?</label>
+                    <textarea rows="4" required placeholder="I want to volunteer as a developer..."></textarea>
                 </div>
-            </div>
-
-            <div class="contact-form">
-                <div class="form-header">
-                    <h3>Send a Message</h3>
-                </div>
-                
-                <form id="contactForm">
-                    <div class="input-group">
-                        <input type="text" id="name" required>
-                        <label for="name">Your Name</label>
-                    </div>
-
-                    <div class="input-group">
-                        <input type="email" id="email" required>
-                        <label for="email">Email Address</label>
-                    </div>
-
-                    <div class="input-group">
-                        <textarea id="message" rows="4" required></textarea>
-                        <label for="message">How can we help?</label>
-                    </div>
-
-                    <button type="submit" class="btn-submit">
-                        <span>Send Message</span>
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
-                    
-                    <p id="successMsg" style="display:none; color: #10b981; margin-top:15px; text-align:center; font-weight:600;">Message Sent Successfully!</p>
-                </form>
-            </div>
-
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
         </div>
     </section>
 
-    <script>
-        const form = document.getElementById('contactForm');
-        form.addEventListener('submit', (e) => {
-            e.preventDefault(); // Stop page reload
-            
-            const btn = document.querySelector('.btn-submit');
-            const originalHTML = btn.innerHTML;
-            
-            // 1. Change button to loading
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            btn.style.opacity = "0.7";
-            
-            // 2. Wait 2 seconds (simulate sending)
-            setTimeout(() => {
-                // 3. Show Success
-                btn.innerHTML = '<i class="fas fa-check"></i> Sent!';
-                btn.style.backgroundColor = "#10b981"; // Green
-                document.getElementById('successMsg').style.display = 'block';
-                form.reset();
-                
-                // 4. Reset button after 3 seconds
-                setTimeout(() => {
-                    btn.innerHTML = originalHTML;
-                    btn.style.backgroundColor = ""; 
-                    btn.style.opacity = "1";
-                    document.getElementById('successMsg').style.display = 'none';
-                }, 3000);
-            }, 1500);
-        });
-    </script>
-
+    <footer>
+        <div class="footer-col" style="flex: 2;">
+            <a href="#" class="logo" style="margin-bottom: 20px;">Rasheed<span>.</span></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
