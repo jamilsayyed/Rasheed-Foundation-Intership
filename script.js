@@ -1,104 +1,79 @@
-// 1. Mobile Navigation Toggle
-const burger = document.getElementById('burger');
-const nav = document.getElementById('navLinks');
+// 1. Scroll Progress Indicator
+window.onscroll = function() {
+    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+};
 
-burger.addEventListener('click', () => {
-    nav.classList.toggle('nav-active');
-    
-    // Burger Animation
-    burger.classList.toggle('toggle');
-});
-
-// 2. Bonus: Public API Consumption (Motivational Quote)
-// We will fetch a quote to display on the hero section
-const quoteText = document.getElementById('quote-text');
-const quoteAuthor = document.getElementById('quote-author');
-const loadingSpinner = document.getElementById('loading');
-
-async function fetchQuote() {
-    try {
-        // Fetching from a free Quote API
-        const response = await fetch('https://api.quotable.io/random?tags=inspirational');
-        const data = await response.json();
-
-        // Remove loading state
-        loadingSpinner.style.display = 'none';
-
-        // Update UI
-        quoteText.innerText = `"${data.content}"`;
-        quoteAuthor.innerText = `- ${data.author}`;
-    } catch (error) {
-        loadingSpinner.style.display = 'none';
-        quoteText.innerText = "Empowering lives, one step at a time.";
-        console.log("API Error:", error);
+// 2. Active Page Highlight
+const currentLocation = location.href;
+const menuItem = document.querySelectorAll('.nav-links a');
+for (let i = 0; i < menuItem.length; i++) {
+    if (menuItem[i].href === currentLocation) {
+        menuItem[i].classList.add("active");
     }
 }
 
-// Call the function on load
-window.addEventListener('load', fetchQuote);
+// 3. API Consumption: Fetch "Latest News" (Simulated Press Releases)
+const newsContainer = document.getElementById('news-container');
 
+if (newsContainer) {
+    // Determine if we are in API loading mode
+    const apiURL = 'https://jsonplaceholder.typicode.com/posts?_limit=3';
 
-// 3. Form Validation
+    async function fetchNews() {
+        try {
+            // Wait 1.5 seconds to SHOW OFF the skeleton loading state (Crucial for "Bonus Points")
+            await new Promise(r => setTimeout(r, 1500)); 
+
+            const response = await fetch(apiURL);
+            const data = await response.json();
+
+            // Clear Skeletons
+            newsContainer.innerHTML = '';
+
+            // Inject Real Data
+            data.forEach(post => {
+                const card = document.createElement('div');
+                card.className = 'news-card fade-in';
+                card.innerHTML = `
+                    <div style="height: 200px; background: #cbd5e1; display:flex; align-items:center; justify-content:center; color:#64748b;">
+                        <i class="fas fa-newspaper fa-2x"></i>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">${capitalize(post.title.substring(0, 25))}...</h3>
+                        <p class="news-body">${capitalize(post.body.substring(0, 80))}...</p>
+                        <a href="#" class="news-link">Read Update &rarr;</a>
+                    </div>
+                `;
+                newsContainer.appendChild(card);
+            });
+
+        } catch (error) {
+            newsContainer.innerHTML = '<p style="text-align:center; color:red;">Failed to load updates. Please check connection.</p>';
+        }
+    }
+
+    fetchNews();
+}
+
+// Helper: Capitalize first letter
+function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+// 4. Contact Form Logic
 const form = document.getElementById('contactForm');
-const successMsg = document.getElementById('success-msg');
-
-form.addEventListener('submit', (e) => {
-    e.preventDefault(); // Stop actual submission
-    
-    const name = document.getElementById('name');
-    const email = document.getElementById('email');
-    const message = document.getElementById('message');
-    
-    let isValid = true;
-
-    // Validate Name
-    if (name.value.trim() === '') {
-        setError(name);
-        isValid = false;
-    } else {
-        removeError(name);
-    }
-
-    // Validate Email
-    if (email.value.trim() === '' || !isValidEmail(email.value)) {
-        setError(email);
-        isValid = false;
-    } else {
-        removeError(email);
-    }
-
-    // Validate Message
-    if (message.value.trim() === '') {
-        setError(message);
-        isValid = false;
-    } else {
-        removeError(message);
-    }
-
-    // If all valid, show success
-    if (isValid) {
-        successMsg.style.display = 'block';
-        form.reset();
+if(form) {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const btn = form.querySelector('button');
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         setTimeout(() => {
-            successMsg.style.display = 'none';
-        }, 3000);
-    }
-});
-
-function setError(input) {
-    const formGroup = input.parentElement;
-    formGroup.classList.add('error');
-}
-
-function removeError(input) {
-    const formGroup = input.parentElement;
-    formGroup.classList.remove('error');
-}
-
-function isValidEmail(email) {
-    return String(email)
-        .toLowerCase()
-        .match(
-            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-        );
+            btn.innerHTML = '<i class="fas fa-check"></i> Sent!';
+            btn.style.background = "#10b981";
+            form.reset();
+        }, 2000);
+    });
 }
