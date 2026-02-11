@@ -56,5 +56,4 @@ To prevent **Cumulative Layout Shift (CLS)** and improve Perceived Performance, 
 ├── services.html    # Core Initiatives Grid
 ├── contact.html     # Contact Form with Client-Side Validation
 ├── style.css        # Master Stylesheet (Variables, Animations, Media Queries)
-├── script.js        # Logic (API Fetch, Menu Toggle, Form Handling)
-└── assets/          # Images & Icons
+└── script.js        # Logic (API Fetch, Menu Toggle, Form Handling)
