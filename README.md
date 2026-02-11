@@ -10,8 +10,7 @@ Achieved **industry-leading performance scores** by avoiding heavy frameworks an
 | **Mobile Score** | **Desktop Score** |
 | :---: | :---: |
 | **98 / 100** 🚀 | **100 / 100** 🏆 |
-|  <img width="1920" height="1080" alt="Screenshot (2894)" src="https://github.com/user-attachments/assets/714e2937-5400-42c0-abed-eb0263bb481f" />
-| <img width="1920" height="1080" alt="Screenshot (2895)" src="https://github.com/user-attachments/assets/eefb25dd-1cf4-4fa7-b49c-68137a424c4b" />|
+|  <img width="1920" height="1080" alt="Screenshot (2894)" src="https://github.com/user-attachments/assets/714e2937-5400-42c0-abed-eb0263bb481f" />| <img width="1920" height="1080" alt="Screenshot (2895)" src="https://github.com/user-attachments/assets/eefb25dd-1cf4-4fa7-b49c-68137a424c4b" />|
 
 ---
 
